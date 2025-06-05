@@ -3,6 +3,7 @@
 import asyncio
 import os
 import re
+from dotenv import load_dotenv
 
 import aiohttp
 
@@ -99,6 +100,7 @@ async def main() -> None:
     """
     Generate all badges
     """
+    load_dotenv()
     access_token = os.getenv("ACCESS_TOKEN")
     if not access_token:
         # access_token = os.getenv("GITHUB_TOKEN")
